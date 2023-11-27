@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sorting Algorithms</h1>
+
+      <h2>Quicksort</h2>
+      <p>
+        Quicksort is a fast sorting algorithm that uses a divide-and-conquer
+        approach. It works by selecting a 'pivot' element from the array and
+        partitioning the other elements into two sub-arrays according to whether
+        they are less than or greater than the pivot.
+      </p>
+
+      <h2>Insertion Sort</h2>
+      <p>
+        Insertion Sort is a simple sorting algorithm that builds the final
+        sorted array one item at a time. It is much less efficient on large
+        lists than more advanced algorithms such as quicksort, heapsort, or
+        merge sort.
+      </p>
+
+      <h2>Radix Sort</h2>
+      <p>
+        Radix Sort is a non-comparative integer sorting algorithm that sorts
+        data with integer keys by grouping keys by the individual digits that
+        share the same significant position and value. Radix Sort can be applied
+        to both integers and strings.
+      </p>
+
+      <h2>Heapsort</h2>
+      <p>
+        Heapsort is a comparison-based sorting algorithm that uses a binary heap
+        data structure to build a max-heap (for ascending order) or min-heap
+        (for descending order) and then performs a heap-based sorting. It has a
+        time complexity of O(n log n) and is not significantly affected by the
+        initial ordering of the input.
+      </p>
+    </header>
+
+    <section>
+      <button onclick="runSorting(100)">Test for 100 Elements</button>
+      <button onclick="runSorting(250)">Test for 250 Elements</button>
+      <button onclick="runSorting(500)">Test for 500 Elements</button>
+      <button onclick="runSorting(750)">Test for 750 Elements</button>
+      <button onclick="runSorting(1000)">Test for 1000 Elements</button>
+      <div id="results"></div>
+    </section>
+
+    <canvas id="chart" width="400" height="200"></canvas>
+
+    <h2>Conclusion</h2>
+    <p>
+      After conducting tests, it was observed that Insertion Sort performs
+      better for arrays smaller than 100 elements. However, for larger arrays
+      exceeding 100 elements, Radix Sort demonstrated better performance. The
+      choice of sorting algorithm may depend on the size and characteristics of
+      the data set being sorted.
+    </p>
+
+    <script src="script.js"></script>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
